@@ -1,0 +1,3 @@
+acme_car_homepage:
+    path:     /
+    defaults: { _controller: AcmeCarBundle:Default:index }

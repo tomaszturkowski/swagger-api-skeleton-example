@@ -1,0 +1,4 @@
+services:
+    swagger.controller.car:
+        class: Acme\CarBundle\Service\Car
+        arguments: ['@doctrine.orm.entity_manager']

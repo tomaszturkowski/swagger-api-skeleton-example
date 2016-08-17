@@ -1,0 +1,8 @@
+acme_car:
+    resource: "@AcmeCarBundle/Resources/config/routing.yml"
+    prefix:   /
+
+acme_car_api_v1:
+    resource: "car_v1.yml"
+    type: swagger
+    prefix: '/v1'

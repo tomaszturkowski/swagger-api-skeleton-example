@@ -1,0 +1,45 @@
+---
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Example swagger based API
+paths:
+  /car/{id}:
+      get:
+        tags:
+          - car
+        description: Details about a car.
+        operationId: findCarById
+        parameters:
+          - name: id
+            in: path
+            type: integer
+            format: int32
+            required: true
+            description: The id of the car.
+        responses:
+          200:
+            description: Sends the car with this id.
+            schema:
+              $ref: "#/definitions/car"
+          404:
+            description: Car not found.
+definitions:
+############
+  car:
+    type: object
+    properties:
+      model:
+        type: string
+      milage:
+        type: number
+      price:
+        type: number
+        format: float
+      forSale:
+        type: boolean
+      color:
+        type: string
+      productionDate:
+        type: string
+        format: date
